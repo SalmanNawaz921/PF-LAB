@@ -2,7 +2,7 @@
 #include<iostream>
 
 using namespace std;
-void stateOfPool(int volume , int p1 , int p2 , float h);
+int stateOfPool(int volume , int p1 , int p2 , float h);
  
 main(){
 
@@ -27,21 +27,38 @@ main(){
 }
 
 
-void stateOfPool(int volume , int p1 , int p2 , float h){
+int stateOfPool(int volume , int p1 , int p2 , float h){
    
     int currentVolume = h * (p1 + p2);
     int newVolume = currentVolume - volume;
-
-    if(volume <= p1 && volume <= p2){
-  
-    cout<<"For "<<h<<" hours the pool overflows with "<<newVolume <<" liters" ;
-}
-    if(volume > p1 || volume>p2){
-
     int nVolume = ((currentVolume * 100) / volume);
     int nP1 = ((p1 * 100) / (p1 + p2));
     int nP2 = 100 - nP1 ;
 
-    cout<<"The Pool IS: "<<nVolume<<"% Full. Pipe 1: "<<nP1<<"% Pipe 2: "<<nP2 <<"%";
-}
+    if(volume <= p1){
+  
+    		cout<<"For "<<h<<" hours the pool overflows with "<<newVolume <<" liters" ;
+                return 0;
+	}
+
+
+    if(volume <= p2){
+  
+    		cout<<"For "<<h<<" hours the pool overflows with "<<newVolume <<" liters" ;
+                return 0;
+	}
+
+
+    if(volume > p1){
+
+    		cout<<"The Pool IS: "<<nVolume<<"% Full. Pipe 1: "<<nP1<<"% Pipe 2: "<<nP2 <<"%";
+                return 0;
+	}
+
+    if(volume > p2){
+
+    		cout<<"The Pool IS: "<<nVolume<<"% Full. Pipe 1: "<<nP1<<"% Pipe 2: "<<nP2 <<"%";
+                return 0;
+	}
+
 }
