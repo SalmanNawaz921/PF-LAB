@@ -9,7 +9,6 @@ main()
 {
    float base;
    float degrees;
-// float radians;
 
 
    cout<<"Enter Base: ";

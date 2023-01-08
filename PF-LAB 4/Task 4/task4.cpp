@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int checkNumber(int number);
+void checkNumber(int number);
 
 main(){
 
@@ -11,14 +11,11 @@ main(){
    cout<<"Enter Number: ";
    cin>>number;
   
-   int no =checkNumber(number); 
-
-   cout<<no;
-
+   checkNumber(number); 
 
 }
 
-int checkNumber(int number){
+void checkNumber(int number){
 
 
    int rem1 = number % 10;
@@ -39,7 +36,7 @@ int checkNumber(int number){
 
    if(sum % 2 == 0 ){
 
-   cout<<"Number Is Evenish";
+   cout<<"Number Is Evenish ";
   }
 
    if(sum % 2 != 0 ){
@@ -47,5 +44,6 @@ int checkNumber(int number){
    cout<<"Number Is Oddish";
   }
  
-     return 0;
+ 
+   
 }

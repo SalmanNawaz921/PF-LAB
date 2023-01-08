@@ -12,8 +12,6 @@ main(){
   cout<<"Enter Number: ";
   cin>>number;
 
-// int boolean = symmetery(number);
-
   cout<<symmetery(number);
 
 

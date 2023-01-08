@@ -37,6 +37,7 @@ int calculateTime(int hours, int minutes){
        hours = hours-24;
 }
 
-   cout << "The time after 15 minutes will be " << hours << ":" << minutes << endl;
-   return 0;
+   cout << "The time after 15 minutes will be " << hours << ":";
+   return minutes;
+   cout<< endl;
 } 

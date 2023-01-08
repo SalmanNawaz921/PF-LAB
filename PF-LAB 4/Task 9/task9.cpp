@@ -34,7 +34,7 @@ float calculateX(float a , float b , float c){
       float squareB = pow(b,2); 
       float res = squareB - (4 * a * c);
       float sqRoot = sqrt(res);
-      float result = ((-1 * b) + sqRoot) / (2 * a);
+      float result = (((-1 * b) + sqRoot) / (2 * a));
       return result;
 
 }
@@ -44,7 +44,7 @@ float calculateXIs(float a , float b , float c){
       float squareB = pow(b,2); 
       float res = squareB - (4 * a * c);
       float sqRoot = sqrt(res);
-      float result = ((-1 * b) - sqRoot) / (2 * a);
+      float result = (((-1 * b) - sqRoot) / (2 * a));
       return result;
 
 }

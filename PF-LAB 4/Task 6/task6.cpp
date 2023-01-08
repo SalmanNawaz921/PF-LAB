@@ -1,126 +1,198 @@
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 
-string numberName(int num);
-string digitName(int digit);
+string numberName(int num, int digit , int number);
+string digitName(int digit, int number);
+main()
+{
 
-main(){
+    int number;
 
-   int number;
+    cout << "ENTER NUMBER: ";
+    cin >> number;
 
-   cout<<"ENTER NUMBER: ";
-   cin>>number;
+    int digit = number % 10;
+    int num = number - digit;
 
-     int digit = number % 10;
-     int  num  = number - digit;  
+    string numName = numberName(num,digit,number);
+    string digName = digitName(digit,number);
 
-   string numName = numberName(num);
-   string digName = digitName(digit);
-
-   cout<<numName<<" "<<digName;
-
+    cout << numName << " " << digName;
 }
 
+string numberName(int num , int digit , int number )
+{
+    string nameNumber;
 
+        // Extra Task For Displaying Name From (11-19)
 
-string numberName(int num){
-     string nameNumber;
-     if(num == 10){
- 
-         nameNumber= "Ten";
-     }
+   if(number >=11 && number<=19){
 
-     if(num == 20){
- 
-         nameNumber= "Twenty";
-     }
+    if (digit == 1 && num == 10)
+    {
+        nameNumber = "Eleven";
+    }
 
-     if(num == 30){
- 
-         nameNumber= "Thirty";
-     }
+    if (digit == 2 && num == 10)
+    {
+        nameNumber = "Twelve";
+    }
 
-    if(num == 40){
- 
-         nameNumber= "Fourty";
-     }
+    if (digit == 3 && num == 10)
+    {
+        nameNumber = "Thirteen";
+    }
 
-    if(num == 50){
- 
-         nameNumber= "Fifty";
-     }
+    if (digit == 4 && num == 10)
+    {
+        nameNumber = "Fourteen";
+    }
 
-    if(num == 60){
- 
-         nameNumber="Sixty";
-     }
+    if (digit == 5 && num == 10)
+    {
+        nameNumber = "Fifteen";
+    }
 
-    if(num == 70){
- 
-         nameNumber= "Seventy";
-     }
+    if (digit == 6 && num == 10)
+    {
+        nameNumber = "Sixteen";
+    }
 
-    if(num == 80){
- 
-         nameNumber= "Eighty";
-     }
+    if (digit == 7 && num == 10)
+    {
+        nameNumber = "Seventeen";
+    }
 
-    if(num == 90){
- 
-         nameNumber= "Ninty";
-     }
-      return nameNumber;
+    if (digit == 8 && num == 10)
+    {
+        nameNumber = "Eighteen";
+    }
+
+    if (digit == 9 && num == 10)
+    {
+        nameNumber = "Nineteen";
+    }
+    return nameNumber;
+   }  
+    
+    if (num == 10)
+    {
+
+        nameNumber = "Ten";
+    }
+
+    if (num == 20)
+    {
+
+        nameNumber = "Twenty";
+    }
+
+    if (num == 30)
+    {
+
+        nameNumber = "Thirty";
+    }
+
+    if (num == 40)
+    {
+
+        nameNumber = "Fourty";
+    }
+
+    if (num == 50)
+    {
+
+        nameNumber = "Fifty";
+    }
+
+    if (num == 60)
+    {
+
+        nameNumber = "Sixty";
+    }
+
+    if (num == 70)
+    {
+
+        nameNumber = "Seventy";
+    }
+
+    if (num == 80)
+    {
+
+        nameNumber = "Eighty";
+    }
+
+    if (num == 90)
+    {
+
+        nameNumber = "Ninty";
+    }
+
+    return nameNumber;
 }
 
-string digitName(int digit){
+string digitName(int digit , int number)
+{
 
     string nameDigit;
-  
-     if(digit == 1){
- 
-         nameDigit= "One";
-     }
 
-     if(digit == 2){
- 
-         nameDigit= "Two";
-     }
+    if(number < 11 || number > 19){
+    if (digit == 1)
+    {
 
-     if(digit == 3){
- 
-         nameDigit= "Three";
-     }
+        nameDigit = "One";
+    }
 
-    if(digit == 4){
- 
-         nameDigit= "Four";
-     }
+    if (digit == 2)
+    {
 
-    if(digit == 5){
- 
-         nameDigit= "Five";
-     }
+        nameDigit = "Two";
+    }
 
-    if(digit == 6){
- 
-         nameDigit= "Six";
-     }
+    if (digit == 3)
+    {
 
-    if(digit == 7){
- 
-         nameDigit= "Seven";
-     }
+        nameDigit = "Three";
+    }
 
-    if(digit == 8){
- 
-         nameDigit= "Eight";
-     }
+    if (digit == 4)
+    {
 
-    if(digit == 9){
- 
-         nameDigit= "Nine";
-     }
+        nameDigit = "Four";
+    }
+
+    if (digit == 5)
+    {
+
+        nameDigit = "Five";
+    }
+
+    if (digit == 6)
+    {
+
+        nameDigit = "Six";
+    }
+
+    if (digit == 7)
+    {
+
+        nameDigit = "Seven";
+    }
+
+    if (digit == 8)
+    {
+
+        nameDigit = "Eight";
+    }
+
+    if (digit == 9)
+    {
+
+        nameDigit = "Nine";
+    }
 
     return nameDigit;
+    }
 }
