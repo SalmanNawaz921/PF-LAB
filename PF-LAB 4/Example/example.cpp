@@ -48,8 +48,8 @@ main(){
 //        int cubRoot = cbrt(number1);
 //        float cubRoot = cbrt(num1);
 
-//          float round= ceil(num1);
-            float round= floor(num1); 
+           float round= ceil(num1);
+  //          float round= floor(num1); 
  
          cout<<	round;
 }
