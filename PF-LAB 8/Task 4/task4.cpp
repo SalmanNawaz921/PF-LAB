@@ -2,50 +2,47 @@
 
 using namespace std;
 
-int numbers[100];
+int numbers[1000];
 int arrayLength;
 
-// function to check if the array is a repeating cycle
 bool isRepeatingCycle(int cycleLength)
 {
     if (cycleLength > arrayLength)
         return true;
     for (int i = 0; i < arrayLength; i++)
     {
-       
+
         if (numbers[i % cycleLength] != numbers[i])
             return false;
     }
-
 
     return true;
 }
 
 int main()
 {
-    cout << "Enter the length of the array: ";
+    cout << "ENTER SIZE OF ARRAY: ";
     cin >> arrayLength;
     for (int i = 0; i < arrayLength; i++)
     {
 
-
-    cout << "Enter the elements of the array: ";
+        cout << "ENTER ELEMENT AT INDEX: " << i + 1 << ": ";
         cin >> numbers[i];
     }
 
     int cycleLength;
-    cout << "Enter the length of each cycle: ";
+    cout << "ENTER LENGTH OF EACH CYCLE: ";
     cin >> cycleLength;
 
-    bool repeat=isRepeatingCycle(cycleLength);
+    bool repeat = isRepeatingCycle(cycleLength);
 
     if (repeat)
     {
-        cout << "The array is a repeating cycle" << endl;
+        cout << "ARRAY IS A REPEATING CYCLE" << endl;
     }
     else
     {
-        cout << "The array is a non-repeating cycle" << endl;
+        cout << "ARRAY IS A NON-REPEATING CYCLE" << endl;
     }
 
     return 0;

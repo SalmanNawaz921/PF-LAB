@@ -2,8 +2,6 @@
 
 using namespace std;
 
-// int countMiles(int no,int number)
-
 main()
 {
 
@@ -17,7 +15,7 @@ main()
 
     for (int i = 0; i < no; i++)
     {
-        cout << "ENTER WEEK " << i << " PROGRESS: ";
+        cout << "ENTER WEEK " << i + 1 << " PROGRESS: ";
         cin >> number[i];
 
         if (number[i] > number[i - 1])
@@ -25,5 +23,5 @@ main()
             count++;
         }
     }
-    cout << count;
+    cout << "THERE ARE " << count << " PROGRESS DAYS";
 }

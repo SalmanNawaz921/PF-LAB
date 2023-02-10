@@ -6,7 +6,7 @@ int main()
 {
     int size;
 
-    cout << "Enter the size of the array: ";
+    cout << "ENTER THE SIZE OF ARRAY: ";
     cin >> size;
 
     int arr[size];
@@ -14,10 +14,9 @@ int main()
 
     int count = 0;
 
-    cout << "Enter the elements of the array: " << endl;
     for (int i = 0; i < size; i++)
     {
-        cout << "Element at index " << i << ": ";
+        cout << "ENTER ELEMENTS AT INDEX " << i + 1 << ": ";
         cin >> arr[i];
     }
 
@@ -32,11 +31,11 @@ int main()
 
     if (count == 0)
     {
-        cout << "No peak found" << endl;
+        cout << "NO PEAK BOUND " << endl;
     }
     else
     {
-        cout << "The peaks are: ";
+        cout << "PEAKS ARE: ";
         for (int i = 0; i < count; i++)
         {
             cout << arr2[i] << " ";
